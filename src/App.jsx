@@ -12,7 +12,7 @@ function App() {
     window.scrollTo(0, 0);
   }, [currentPage]);
 
-  const featuredProjects = allProjects.slice(0, 4);
+  const featuredProjects = allProjects.slice(1, 5);
   const featuredLogs = alllogs.slice(0, 7);
 
   return (
@@ -58,7 +58,7 @@ function App() {
 
             <section className="about">
               <h2>About Meeeeee~</h2>
-              <p>目前就讀於輔仁大學資訊工程學系。</p>
+              <p>目前就讀於輔仁大學資訊工程學系</p>
               <div className="about-grid">
                 <div className="left-grid">
                   <h3>進行中:</h3>
@@ -72,7 +72,7 @@ function App() {
                   <h3>興趣:</h3>
                   <ol>
                     <li>WebDev</li>
-                    <li>資訊相關笑話</li>
+                    <li>資訊相關冷笑話</li>
                     <li>Kpop</li>
                   </ol>
                 </div>
