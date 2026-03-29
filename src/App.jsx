@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react'
 import './App.css'
 
 import Projects, { allProjects } from './pages/projects'
+import Logs, { alllogs } from './pages/logs'
 
 function App() {
   const [currentPage, setCurrentPage] = useState('home');
@@ -12,6 +13,7 @@ function App() {
   }, [currentPage]);
 
   const featuredProjects = allProjects.slice(0, 4);
+  const featuredLogs = alllogs.slice(0, 7);
 
   return (
     <div className="app-wrapper">
@@ -32,6 +34,12 @@ function App() {
             >
               Projects
             </button>
+            <button 
+              className={currentPage === 'logs' ? 'active' : ''} 
+              onClick={() => setCurrentPage('logs')}
+            >
+              Logs
+            </button>
           </nav>
         </div>
       </header>
@@ -39,6 +47,8 @@ function App() {
       <main className="main-content">
         {currentPage === 'projects' ? (
           <Projects onBack={() => setCurrentPage('home')} />
+        ) : currentPage === 'logs' ? (
+          <Logs onBack={() => setCurrentPage('home')} />
         ) : (
           <div className="container page-transition">
             <section className="hero">
@@ -79,30 +89,42 @@ function App() {
               <div className="project-grid">
                 {featuredProjects.map(proj => (
                   <div className="card" key={proj.id}>
-                    <h3>{proj.title}</h3>
+                    <h3>
+                      {proj.link ? (
+                        <a href={proj.link} target="_blank" rel="noopener noreferrer" style={{ textDecoration: 'none', color: 'inherit' }}>
+                          {proj.title}
+                        </a>
+                      ) : (
+                        proj.title
+                      )}
+                    </h3>
                     <p>{proj.desc}</p>
                   </div>
                 ))}
               </div>
             </section>
 
-            <section className="experience">
-              <h2>My Experience</h2>
-              <div className="project-grid">
-                <div className="card">
-                  <h3>GateAway</h3>
-                  <p>使用 Unity 開發的動作遊戲。</p>
-                </div>
-                <div className="card">
-                  <h3>TWICE Fan Map</h3>
-                  <p>使用 React + Firebase 製作的粉絲地圖。</p>
-                </div>
-                <div className="card">
-                  <h3>Line Bot</h3>
-                  <p>自動化記帳機器人。</p>
-                </div>
+            <section className="logs">
+              <div className="section-header">
+                <h2>My Logs</h2>
+                <button className="view-all-btn" onClick={() => setCurrentPage('logs')}>
+                  查看全部 (View All) <span>→</span>
+                </button>
+              </div>
+              <div className="log-grid">
+                { featuredLogs.map(log => (
+                  <div className="card" key={log.id}>
+                    <h3>{log.category}</h3>
+                    <div className="activity-list">
+                      {log.activities.map((activity, index) => (
+                        <p key={index}>• {activity}</p>
+                      ))}
+                    </div>
+                  </div>
+                ))}
               </div>
             </section>
+
           </div>
         )}
       </main>

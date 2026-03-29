@@ -251,6 +251,18 @@ h2::after {
   gap: 2rem;
 }
 
+.log-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .log-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 .card {
   background-color: var(--card-bg);
   border: 1px solid var(--border-color);
