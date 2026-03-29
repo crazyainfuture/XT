@@ -2,7 +2,7 @@
 
 這是我 (S.O.T_XT) 的個人網站與作品集。目前就讀於輔仁大學資訊工程學系，這裡記錄了我的個人專案 (Projects)、學習歷程與日常紀錄 (Logs)。
 
-🔗 **線上預覽**: [https://crazyainfuture.github.io/my-portfolio](https://crazyainfuture.github.io/my-portfolio)
+🔗 **線上預覽**: [https://crazyainfuture.github.io/XT/](https://crazyainfuture.github.io/XT/)
 
 
 

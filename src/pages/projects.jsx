@@ -1,5 +1,5 @@
 export const allProjects = [
-  { id: 0, title: 'my-portfolio', desc: '我的個人網站', link: 'https://github.com/crazyainfuture/my-portfolio' },
+  { id: 0, title: 'my-portfolio', desc: '我的個人網站', link: 'https://crazyainfuture.github.io/XT/' },
   { id: 1, title: 'FJU EAT', desc: '輔大校園美食地圖', link: 'https://crazyainfuture.github.io/fjufindfood/' },
   { id: 2, title: 'brain.push_back', desc: '大學筆記、作業、程式相關資訊，歡迎挖寶!', link: 'https://github.com/crazyainfuture/brain.push_back.git' },
   { id: 3, title: 'medical_platform', desc: '一個結合AI與醫療的平台，學習api串接與網頁開發', link: 'https://github.com/crazyainfuture/medical_platform_revised.git' },
