@@ -13,7 +13,7 @@ function App() {
   }, [currentPage]);
 
   const featuredProjects = allProjects.slice(1, 5);
-  const featuredLogs = alllogs.slice(0, 7);
+  const featuredLogs = alllogs.slice(0, 4);
 
   return (
     <div className="app-wrapper">
@@ -82,9 +82,6 @@ function App() {
             <section className="projects">
               <div className="section-header">
                 <h2>My Dev</h2>
-                <button className="view-all-btn" onClick={() => setCurrentPage('projects')}>
-                  查看全部 (View All) <span>→</span>
-                </button>
               </div>
               <div className="project-grid">
                 {featuredProjects.map(proj => (
@@ -102,14 +99,16 @@ function App() {
                   </div>
                 ))}
               </div>
+              <div className='section-footer'>
+                <button className="view-all-btn" onClick={() => setCurrentPage('projects')}>
+                  查看全部 (View All) <span>→</span>
+                </button>
+              </div>
             </section>
 
             <section className="logs">
               <div className="section-header">
                 <h2>My Logs</h2>
-                <button className="view-all-btn" onClick={() => setCurrentPage('logs')}>
-                  查看全部 (View All) <span>→</span>
-                </button>
               </div>
               <div className="log-grid">
                 { featuredLogs.map(log => (
@@ -122,6 +121,11 @@ function App() {
                     </div>
                   </div>
                 ))}
+              </div>
+              <div className='section-footer'>
+                <button className="view-all-btn" onClick={() => setCurrentPage('logs')}>
+                  查看全部 (View All) <span>→</span>
+                </button>
               </div>
             </section>
 

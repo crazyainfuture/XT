@@ -368,6 +368,14 @@ footer {
   margin: 0;
 }
 
+.section-footer {
+  display: flex;
+  justify-content: right;
+  align-items: right;
+  margin-top: 3rem;
+  width: 100%;
+}
+
 .view-all-btn {
   background-color: transparent;
   color: var(--primary);
